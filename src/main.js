@@ -1,9 +1,11 @@
 import 'phaser';
+import BootScene from './scenes/BootScene';
 import GameScene from './scenes/GameScene';
 import TitleScene from './scenes/TitleScene';
+import EventScene from './scenes/EventScene';
+
 
 const config = {
-    // For more settings see <https://github.com/photonstorm/phaser/blob/master/src/boot/Config.js>
     type: Phaser.WEBGL,
     parent: 'content',
     width: 800,
@@ -14,8 +16,10 @@ const config = {
         }
     },
     scene: [
+        BootScene,
         TitleScene,
-        GameScene
+        GameScene,
+        EventScene
     ]
 };
 

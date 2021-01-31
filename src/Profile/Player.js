@@ -24,7 +24,19 @@ export default class Player {
         this.isCursed = false;
         this.isHaunted = false;
         this.isHunted = false;
+
+        this.actions = 15;
     }
 
-    
+    giveCurse() {
+        this.cursed = true;
+    }
+
+    removeCurse() {
+        this.cursed = false;
+    }
+
+    setActions(num) {
+        this.actions = num;
+    }
 }

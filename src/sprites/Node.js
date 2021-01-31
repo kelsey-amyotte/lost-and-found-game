@@ -3,22 +3,19 @@ Generic enemy class that extends Phaser sprites.
 Classes for enemy types extend this class.
 */
 
-export default class Node extends Phaser.GameObjects.Sprite {
-    constructor(config) {
-        super(config.scene, config.x, config.y, config.key);
-        config.scene.add.existing(this);
-        this.available = true;
+export default class Node extends Phaser.GameObjects.Image {
+    constructor(scene, player, cursor) {
+        super(scene, Math.random() * 500, Math.random() * 500, 'url(../../assets/node.png)');
+        scene.add.existing(this);
+        this.setInteractive({ cursor: 'url(../assets/input/' + cursor + '.png), pointer'});
+        this.alpha = .1;
 
-        // Standard sprite is 16x16 pixels with a smaller body
-        this.body.setSize(12, 12);
-        this.body.offset.set(10, 12);
-    }
+        this.player = player;
 
-    activated() {
-    }
-
-    kill() {
-        this.scene.nodeGroup.remove(this);
-        this.destroy();
+        this.on('pointerup', function() {
+            //scene.scene.switch('EventScene', cursor);
+            this.player.actions--;
+            console.log(this.player.actions);
+        })
     }
 }

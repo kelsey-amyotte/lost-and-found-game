@@ -1,10 +1,9 @@
-import GameWorld from "../Profile/GameWorld.mjs";
-import Player from '../Profile/Player.mjs';
-import InjuryTracker from "./Injury tracker.mjs";
 
-export default class DayLoop {
-    constructor() {
+/*export default class DayLoop {
+    constructor(world, player) {
         this.dayCount = 0;
+        this.world = world;
+        this.player = player;
     }
 
     runDay(playerOne, world, debug) {
@@ -110,4 +109,4 @@ export default class DayLoop {
             console.log("You find a " + commonLoot[Math.floor(Math.random() * commonLoot.length)] + ". It is useful for something");
         }
     }
-}
+}*/

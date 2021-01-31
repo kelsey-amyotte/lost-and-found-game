@@ -1,4 +1,4 @@
-export default class GameWorld {
+export default class GameWorldLogic {
     constructor() {
         this.waterSupply = 20;
         this.foodSupply = 10;
@@ -13,7 +13,13 @@ export default class GameWorld {
         this.campMoved = false;
     }
 
-    
+    announceWeather() {
+        console.log("You wake up to a new day, the weather is " + world.weatherCondition + ".");
+    }
+
+    changeWeather(newWeather) {
+        this.weatherCondition = newWeather;
+    }    
 }
 
 
