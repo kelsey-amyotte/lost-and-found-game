@@ -1,14 +1,14 @@
 {
-  "name": "Phaser3ES6Webpack",
+  "name": "LostandFoundGame",
   "version": "1.1.0",
   "description": "",
-  "author": "niklas berg <me@niklasberg.se>",
+  "author": "kelsey amyotte",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode=development",
     "deploy": "webpack  --mode=production --config webpack.production.config.js",
     "test": "eslint ./src/**/**.js",
-    "start": "webpack  --mode=production --config webpack.production.config.js"
+    "start": "webpack --mode=development"
   },
   "license": "MIT",
   "devDependencies": {
